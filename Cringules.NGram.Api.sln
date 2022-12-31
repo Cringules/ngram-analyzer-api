@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cringules.NGram.Api", "Cringules.NGram.Api\Cringules.NGram.Api.csproj", "{02B76F9C-6751-4B8C-AA74-E878F4397699}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02B76F9C-6751-4B8C-AA74-E878F4397699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02B76F9C-6751-4B8C-AA74-E878F4397699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02B76F9C-6751-4B8C-AA74-E878F4397699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02B76F9C-6751-4B8C-AA74-E878F4397699}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
