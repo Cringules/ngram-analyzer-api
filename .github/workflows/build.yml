@@ -10,9 +10,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Fetch all git history
-        run: git fetch --prune
+        with:
+          fetch-depth: 0
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
