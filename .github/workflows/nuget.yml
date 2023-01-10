@@ -69,6 +69,6 @@ jobs:
           dotnet pack -c Release -o out -p:Version=${{ steps.gitversion.outputs.assemblySemVer }} -p:AssemblyVersion=${{ steps.gitversion.outputs.assemblySemVer }} -p:FileVersion=${{ steps.gitversion.outputs.assemblySemFileVer }} -p:InformationalVersion=${{ steps.gitversion.outputs.informationalVersion }}
 
       - name: Publish the package to nuget.org
-        run: dotnet nuget push */out/*.nupkg -k NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+        run: dotnet nuget push ./out/*.nupkg -k NUGET_API_KEY -s https://api.nuget.org/v3/index.json
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
