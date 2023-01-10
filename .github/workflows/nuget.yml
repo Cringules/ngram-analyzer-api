@@ -68,9 +68,6 @@ jobs:
         run: |
           dotnet pack -c Release -o out -p:Version=${{ steps.gitversion.outputs.assemblySemVer }} -p:AssemblyVersion=${{ steps.gitversion.outputs.assemblySemVer }} -p:FileVersion=${{ steps.gitversion.outputs.assemblySemFileVer }} -p:InformationalVersion=${{ steps.gitversion.outputs.informationalVersion }}
 
-      - name: Create a Release
-        uses: ncipollo/release-action@v1
-
       - name: Publish the package to nuget.org
         run: dotnet nuget push */out/*.nupkg -k NUGET_API_KEY -s https://api.nuget.org/v3/index.json
         env:
