@@ -31,7 +31,7 @@ public class PlotData
     /// </summary>
     /// <param name="points">A list of data points to construct the data from.</param>
     [JsonConstructor]
-    public PlotData(List<PlotPoint> points) : this((IEnumerable<PlotPoint>) points)
+    public PlotData(IReadOnlyList<PlotPoint> points) : this((IEnumerable<PlotPoint>) points)
     {
     }
 }
