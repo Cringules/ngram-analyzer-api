@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Cringules.NGram.Api;
 
 /// <summary>
@@ -22,5 +24,14 @@ public class PlotData
     public PlotData(IEnumerable<PlotPoint> points)
     {
         _points = points.OrderBy(point => point.Angle).ToList();
+    }
+
+    /// <summary>
+    /// Constructs the diffractogram plot data instance from data points. This constructor is used by JSON deserializer.
+    /// </summary>
+    /// <param name="points">A list of data points to construct the data from.</param>
+    [JsonConstructor]
+    public PlotData(List<PlotPoint> points) : this((IEnumerable<PlotPoint>) points)
+    {
     }
 }
